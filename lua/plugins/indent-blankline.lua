@@ -1,7 +1,6 @@
 return {
     "https://github.com/lukas-reineke/indent-blankline.nvim",
     event = { "VeryLazy" },
-    config = function()
-        require("ibl").setup()
-    end,
+    main = "ibl", -- module name differs from the repo, so tell lazy.nvim which to setup()
+    opts = {},
 }
