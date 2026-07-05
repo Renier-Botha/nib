@@ -26,6 +26,13 @@ return {
 			end,
 			desc = "Search project",
 		},
+		{
+			"<leader>fz",
+			function()
+				Snacks.picker.zoxide()
+			end,
+			desc = "Jump to directory (zoxide)",
+		},
 	},
 	---@type snacks.Config
 	opts = {
