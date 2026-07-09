@@ -50,5 +50,6 @@ return {
 		{ "<leader>ot", "<Cmd>Obsidian today<CR>", desc = "Obsidian: today's daily note" },
 		{ "<leader>ob", "<Cmd>Obsidian backlinks<CR>", desc = "Obsidian: backlinks" },
 		{ "<leader>of", "<Cmd>Obsidian follow_link<CR>", desc = "Obsidian: follow link" },
+		{ "<leader>op", "<Cmd>Obsidian open<CR>", desc = "Obsidian: preview note in app" },
 	},
 }

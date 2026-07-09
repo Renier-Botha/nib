@@ -40,6 +40,13 @@ return {
 			end,
 			desc = "Jump to directory (zoxide)",
 		},
+		{
+			"<leader>z",
+			function()
+				Snacks.zen()
+			end,
+			desc = "Toggle zen mode",
+		},
 	},
 	---@type snacks.Config
 	opts = {
@@ -69,11 +76,15 @@ return {
 		scope = { enabled = false }, -- Scope detection / text objects based on indent
 		scroll = { enabled = false }, -- Smooth scrolling animation
 		statuscolumn = { enabled = false }, -- Nicer line-number / sign / fold column
-		image = { enabled = false }, -- Inline image previews (needs a supporting terminal)
+		image = { enabled = true }, -- Inline image previews (works in Ghostty via the kitty graphics protocol)
+		zen = { -- Distraction-free mode (toggled with <leader>z); also dims text outside the current scope
+			toggles = {
+				dim = true,
+			},
+		},
 
 		-- On-demand modules: these have no auto-enable toggle. You invoke them
 		-- via their Snacks.<name> API or a keymap. Listed here for discovery:
-		--   Snacks.zen()              -- distraction-free / focus mode
 		--   Snacks.dim()             -- dim inactive code blocks
 		--   Snacks.terminal()        -- toggleable floating terminal
 		--   Snacks.lazygit()         -- lazygit in a float (overlaps your lazygit plugin)
