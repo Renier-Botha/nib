@@ -27,6 +27,13 @@ return {
 			desc = "Search project",
 		},
 		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "Toggle file explorer",
+		},
+		{
 			"<leader>fz",
 			function()
 				Snacks.picker.zoxide()
@@ -41,8 +48,20 @@ return {
 		bigfile = { enabled = true }, -- Disable expensive features on very large files so they don't lag
 		notifier = { enabled = true }, -- Pretty notification popups instead of the default message flashes
 		words = { enabled = true }, -- Highlight other usages of the word under the cursor (LSP references)
-		dashboard = { enabled = false }, -- Start screen (recent files, projects, ASCII header)
-		explorer = { enabled = false }, -- File tree (built on the picker; needs picker too)
+		dashboard = { -- Start screen (recent files, projects, ASCII header)
+			enabled = true,
+			preset = {
+				header = [[
+███╗   ██╗██╗██████╗
+████╗  ██║██║██╔══██╗
+██╔██╗ ██║██║██████╔╝
+██║╚██╗██║██║██╔══██╗
+██║ ╚████║██║██████╔╝
+╚═╝  ╚═══╝╚═╝╚═════╝
+                a config for writing]],
+			},
+		},
+		explorer = { enabled = true }, -- File tree (built on the picker; needs picker too)
 		indent = { enabled = false }, -- Indent guides + scope highlighting (overlaps indent-blankline)
 		input = { enabled = false }, -- Prettier vim.ui.input popups
 		picker = { enabled = true }, -- Fuzzy finder; on so obsidian.nvim can use it (fzf.vim keymaps untouched)
