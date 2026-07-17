@@ -11,6 +11,7 @@ return {
             "lua_ls",
             "rust_analyzer",
             "ts_ls", -- TypeScript / JavaScript (typescript-language-server)
+            "denols", -- Deno language server
         },
     },
 }

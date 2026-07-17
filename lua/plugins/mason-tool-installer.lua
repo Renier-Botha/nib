@@ -9,6 +9,7 @@ return {
         ensure_installed = {
             "stylua", -- Lua formatter
             "prettierd", -- Fast Prettier daemon for JS/TS/web formats
+            "deno", -- Deno runtime (`deno fmt`, `deno lint`, `deno lsp`)
         },
     },
 }

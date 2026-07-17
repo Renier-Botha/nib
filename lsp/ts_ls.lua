@@ -21,7 +21,8 @@ return {
     'typescriptreact',
     'typescript.tsx',
   },
-  root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
+  -- Avoid attaching in Deno projects; denols handles those.
+  root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json' },
   settings = {
     -- Inlay hints are off by default; enable the ones you find useful.
     typescript = {
